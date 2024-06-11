@@ -1,6 +1,7 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
 
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -75,5 +76,16 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+
 });
+
+
+//Set test timeout in the config
+
+export default defineConfig({
+  globalTimeout: 100 * 60 * 1000
+});
+
+
+
 

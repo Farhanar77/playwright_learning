@@ -10,8 +10,9 @@ export class SwagShoppingCartPage{
         //this.loginpage = new SwagLoginPage(page);
         this.carticon = page.locator("//a[@class='shopping_cart_link']");
         this.yourcartpage = page.locator("//span[@class='title']");
-        this.cartlst = page.locator('#root').locator('.page_wrapper').locator('#contents_wrapper').locator('#cart_contents_container').locator('div.cart_list').locator('.cart_item');
-    }
+        this.cartitm = page.locator('.cart_item');
+        this.
+}
 
     async cart(){
         await this.carticon.click();
@@ -19,8 +20,8 @@ export class SwagShoppingCartPage{
         
     }
 
-    async cartlist(){
-        await expect(this.cartlst).toBeEmpty();
+    async cartitem(){
+        await expect(this.cartitm).not.toBeVisible();
         
     }
 

@@ -4,17 +4,17 @@
   import { SwagMenubar } from "../models/menubar";
   import { SwagShoppingCartPage } from "../models/shopping_cartpage";
   import { SwagProductlistPage } from "../models/product_list_page";
-  import { SwagSpecificProddetailsPage } from "../models/specific_product_deails_page.js";
+  import { SwagSpecificProddetailsPage } from "../models/specific_product_deail_page.js";
 
   test.describe("Swag Website", () => {
-      let login , menubarp, logout, shopping_cart, product_listes;
+      let login , menubarp, logout, shopping_cart, product_listes,speciprodct;
       test.beforeEach(async ({ page }) => {
           login = new SwagLoginPage(page);
           logout = new SwagLogoutPage(page);
           menubarp = new SwagMenubar(page);
           shopping_cart = new SwagShoppingCartPage(page); 
           product_listes = new SwagProductlistPage(page);
-          //speciprodct = new SwagSpecificProddetailsPage(page);
+          speciprodct = new SwagSpecificProddetailsPage(page);
 
       });
       
@@ -174,6 +174,7 @@
       await login.goto();
       await login.authentication();
       await shopping_cart.cart();
+      await shopping_cart.cartitem();
 
     });
   

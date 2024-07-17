@@ -15,6 +15,7 @@ export class SwagProductlistPage{
         this.productitemdescrp = page.locator('.inventory_list').locator('.inventory_item').first().locator('.inventory_item_description').locator('.inventory_item_label').locator('.inventory_item_desc');
         this.productprice = page.locator('.inventory_list').locator('.inventory_item').first().locator('.inventory_item_description').locator('.pricebar').locator('.inventory_item_price');
         this.addtocartbutton = page.locator('.inventory_list').locator('.inventory_item').first().locator('.inventory_item_description').locator('.pricebar').locator('button');
+        this.addtocartbutton2 = page.locator('.inventory_list').locator('.inventory_item').nth(1).locator('.inventory_item_description').locator('.pricebar').locator('button');
         this.productfilteroption = page.locator('.product_sort_container');
 
     }
@@ -51,8 +52,17 @@ export class SwagProductlistPage{
       
         await this.addtocartbutton.click(); 
         await expect(this.addtocartbutton).toContainText('Remove');
-
+      
     }
+
+    async addtocartclick2(){
+      
+        await this.addtocartbutton2.click(); 
+        await expect(this.addtocartbutton2).toContainText('Remove');
+        
+    }
+
+
 
     async removeitem(){
       

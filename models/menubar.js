@@ -7,9 +7,9 @@
      */
         constructor(page) {
             this.page = page;
-            this.mebubarclick = page.locator("//button[@id='react-burger-menu-btn']");
+            this.mebubarclick = page.locator('#react-burger-menu-btn');
             this.menubarclosebutton = page.locator("//button[@id='react-burger-cross-btn']");
-            this.allitems = page.locator("//a[@id='inventory_sidebar_link']");
+            this.allitems = page.locator('#inventory_sidebar_link');
             this.aboutclick = page.locator("//a[@id='about_sidebar_link']");
             this.logoutbuttontext = page.locator("//a[@id='logout_sidebar_link']");   
             this.reset = page.locator("//a[@id='reset_sidebar_link']");

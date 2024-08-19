@@ -3,8 +3,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-tests/swag-labs.spec.js
-tests/shikhowebsite.spec.js
-tests/demo-todo-app.spec.js
-tests/example.spec.js
+/tests/demo-todo-app.spec.js/
+/tests/swag-labs-website-testing.spec.js/
+.DS_Store/
 
